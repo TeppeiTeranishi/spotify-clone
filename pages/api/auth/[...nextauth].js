@@ -22,7 +22,7 @@ async function refreshAccessToken(token){
     return {
       ...token,
       error: 'RefreshAccessTokenError'
-    }
+    };
   }
 }
 
@@ -57,7 +57,7 @@ export default NextAuth({
         return token;
       }
       console.log("ACCESS TOKEN HAS EXPIRED, REFRESING...");
-      return await refreshAccessToken(token)
+      return await refreshAccessToken(token);
     },
 
     async session ({ session, token }) {
