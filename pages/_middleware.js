@@ -12,7 +12,7 @@ export async function middleware(req) {
         return NextResponse.next();
     }
     
-    if (!token && pathname !== "/") {
+    if (!token && pathname !== "/login") {
         url.pathname = "/login";
         return NextResponse.rewrite(url);
     }
